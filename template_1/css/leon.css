@@ -1,0 +1,67 @@
+/* Start Global Variables */
+/* End Variables */
+/* start global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+body{
+    font-family: "Work Sans" , sans-serif;
+}
+.container{
+    padding-left: 15px;
+    padding-right:15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* small */
+@media (min-width:768px) {
+    .container{
+        width:750
+    }
+}
+/* medium */
+@media (min-width:992px) {
+    .container{
+        width:970
+    }
+}
+/* large */
+@media (min-width:1200px) {
+    .container{
+        width:1170
+    }
+}
+/* End global rules */
+/* start header */
+.header {
+    padding: 20px;
+  }
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .logo {
+    width: 60px;
+  }
+  .header .links {
+    position: relative;
+  }
+  .header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+  }
+  .header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .header .links .icon span {
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+  }
+
+/* end header */
