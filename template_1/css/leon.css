@@ -3,7 +3,7 @@
   --main-color: #10cab7;
   --secondary-color: #2c4755;
   --section-padding: 60px;
-  --section-background: #f6f6f6;
+  --section-background: #f6f6f7;
   --main-duration: 0.5s;
 }
 /* End Variables */
@@ -201,34 +201,94 @@ font-size:30px
 }
 /* end features */
 /* start services */
-.services{
-  padding-top:60px;
-  padding-bottom: 60px; 
+.services {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
 }
-.services .services-content{
+.services .services-content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 30px;
   margin-top: 100px;
 }
-.services .services-content .srv { 
+.services .services-content .srv {
   display: flex;
   margin-bottom: 40px;
 }
-.services .services-content .srv i{
+@media (max-width: 767px) {
+  .services .services-content .srv {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.services .services-content .srv i {
   color: var(--main-color);
   flex-basis: 60px;
 }
-.services .services-content .srv .text{
+.services .services-content .srv .text {
   flex: 1;
 }
-.services .services-content .srv h3 {
+.services .services-content .srv .text h3 {
   margin: 0 0 20px;
 }
-.services .services-content .srv p{
+.services .services-content .srv .text p {
   color: #444;
   font-weight: 300;
-  line-height: 1.8;
+  line-height: 1.6;
 }
-
+.services .services-content .image {
+  text-align: center;
+  position: relative;
+}
+.services .services-content .image::before {
+  content: "";
+  background-color: var(--secondary-color);
+  width: 100px;
+  height: calc(100% + 100px);
+  top: -50px;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+.services .services-content .image img {
+  width: 260px;
+}
+@media (max-width: 1199px) {
+  image-column {
+    display: none;
+  }
+}
 /* end services  */
+/* start portfolio */
+.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+.portfolio .portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 100px;
+}
+.portfolio .portfolio-content .card {
+  background-color: white;
+  
+}
+.portfolio .portfolio-content img {
+  max-width: 100%;
+}
+.portfolio .portfolio-content .card .info {
+  padding:20px
+}
+.portfolio .portfolio-content .card h3{
+  margin: 0;
+  text-align: center;
+}
+.portfolio .portfolio-content .card p{
+color: #777;
+line-height: 1.8;
+margin-bottom: 0;
+}
+/* end portfolio */
